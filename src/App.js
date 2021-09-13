@@ -2,10 +2,10 @@ import DisplayWeather from "./components/DisplayWeather";
 import SearchWeather from "./components/SearchWeather";
 
 import "./App.css";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 function App() {
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState([]);
   const [city, setCity] = useState("");
   const handleChangeWeather = (weatherData, city) => {
     setCity(city);
