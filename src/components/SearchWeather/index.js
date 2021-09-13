@@ -4,9 +4,11 @@ import "./style.css";
 
 function SearchWeather({ handleChangeWeather }) {
   const [inputValue, setInputValue] = useState("Curitiba");
+  //o yarn ta reclamando dizendo que se o [] esta vazio não é pra colocar;
   useEffect(() => {
     handleSubmit();
-  }, []); //o yarn ta reclamando dizendo que se o [] esta vazio não é pra colocar;
+  }, []);
+
   const handleSubmit = () => {
     fetch(`https://goweather.herokuapp.com/weather/${inputValue}`)
       .then((response) => response.json())
